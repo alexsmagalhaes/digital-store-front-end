@@ -1,19 +1,26 @@
-import { createBrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ProductViewLayout from "../PageLayout/ProductViewLayout";
+import PageNotFound from "../Pages/PageNotFound";
+import ProductViewPage from "../Pages/ProductViewPage";
 
-//pages
-import App from '../App'
-import Home from '../pages/home/index'
+const Paths = () => {
+   return (
+      <BrowserRouter>
 
-export const router = createBrowserRouter([
-   {
-      path: "/",
-      element: <App />,
-      // errorElement: <NotFound />,
-      children: [
-         {
-            path: "/",
-            element: <Home />
-         },
-      ]
-   },
-])
+         <Routes>
+
+            <Route path="/" element={<ProductViewLayout />}>
+
+               <Route path="/product" element={<ProductViewPage />} />
+
+            </Route>
+
+            <Route path="*" element={<PageNotFound />} />
+
+         </Routes>
+
+      </BrowserRouter>
+   );
+};
+
+export default Paths;

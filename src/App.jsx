@@ -1,11 +1,14 @@
-import { Outlet } from "react-router-dom"
+
+import Paths from "./routers/routers";
 
 function App() {
   return (
     <>
-      <Outlet />
+
+    <Paths/>
+      
     </>
-  )
+  );
 }
 
 export default App
