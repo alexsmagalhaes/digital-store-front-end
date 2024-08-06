@@ -4,20 +4,34 @@ const NavMenu = () => {
 
     return (
 
-        <div>
+        <div className="flex flex-wrap justify-between">
 
-            <nav>
-                <ul>
-                    <li>
+            <nav >
+                <ul  
+                className="flex flex-wrap gap-10 pt-8">
+
+                    <li 
+                    className="text-gray-600 font-semibold
+                    hover:text-pink-600 hover:underline ">
+
                         <Link to={""}>Home</Link>
                     </li>
-                    <li>
+
+                    <li className="text-gray-600 font-semibold
+                    hover:text-pink-600 hover:underline ">
+
                         <Link to={""}>Produtos</Link>
                     </li>
-                    <li>
+
+                    <li className="text-gray-600 font-semibold
+                     hover:text-pink-600 hover:underline ">
                         <Link to={""}>Categorias</Link>
+
                     </li>
-                    <li>
+
+                    <li className="text-gray-600 font-semibold
+                     hover:text-pink-600 hover:underline">
+                        
                         <Link to={""}>Meus Pedidos</Link>
                     </li>
 
